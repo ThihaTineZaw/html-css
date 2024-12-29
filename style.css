@@ -1,0 +1,608 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --background_color: white;
+  --text_color: black;
+  --btn_color: rgb(0, 146, 200);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background_color);
+  color: var(--text_color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 100vh;
+}
+
+/* header nav open  */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* logo_section  */
+.logo {
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  padding-left: 10px;
+}
+.logo h1 {
+  color: white;
+}
+.logo > img {
+  width: 3rem;
+}
+
+/* menu start  */
+ul {
+  list-style: none;
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+ul a {
+  color: white;
+  text-decoration: none;
+}
+.menu {
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+/* btn section */
+.applicationform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  text-align: center;
+  width: 100%;
+  background-color: white;
+  padding: 2px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--btn_color);
+}
+/* btn effect */
+.applicationform:hover {
+  scale: 1.1;
+}
+/* background section */
+.backgroundbox {
+  width: 100%;
+}
+.backgroundbox > img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* nav and background combine >> declare position relative */
+.header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+.bg h1 {
+  color: white;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* header section  */
+.backgroundbox {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.backgroundbox img {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+}
+
+.content_text {
+  text-transform: uppercase;
+  z-index: 1;
+  font-size: 25px;
+  padding-left: 5%;
+  color: var(--text_color);
+}
+
+/* making animation for menu li  */
+.menu a {
+  position: relative;
+}
+.menu li a::after {
+  content: "";
+  height: 4px;
+  width: 0%;
+  position: absolute;
+  background-color: white;
+  left: 0;
+  bottom: -5px;
+  transition: 1s;
+}
+
+.menu li a:hover::after,
+.menu li a.home:after {
+  width: 100%;
+}
+
+/* header close */
+
+/* body start  */
+
+.bodybox {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 20px;
+  align-items: center;
+}
+
+.container a {
+  text-decoration: none;
+}
+
+.box1 {
+  max-width: 250px;
+  height: auto;
+  position: relative;
+  padding-top: 25px;
+}
+.coporate_profile {
+  max-width: 250px;
+  border-radius: 10px;
+}
+
+.boxtest {
+  color: var(--text_color);
+}
+
+/* management section  */
+
+.management {
+  max-width: 950px;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.management_container {
+  margin-top: 25px;
+  width: 100%;
+  height: 350px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0;
+}
+
+.management_box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.management_box > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.management a {
+  text-decoration: none;
+  color: var(--text_color);
+}
+
+.management_box .managementbox_text {
+  position: absolute;
+  border: 3px solid white;
+  font-weight: 900;
+  color: var(--text_color);
+  bottom: 45%;
+  padding: 0px 7px 0px 7px;
+  transition: 0.5s;
+}
+.management_box .managementbox_text:hover {
+  scale: 1.05;
+}
+
+/* training_box_section  */
+.training {
+  max-width: 1200px;
+  margin: 85px auto;
+}
+
+.training_box_container {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.training_box {
+  width: 350px;
+  height: 450px;
+  transition: 1s;
+  padding: 0px 10px;
+}
+.training_box:hover {
+  scale: 1.1;
+  filter: brightness(1.15);
+}
+
+.training_box_container img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.training h1 {
+  text-align: center;
+}
+
+.training h3 {
+  text-align: center;
+}
+
+.training_text {
+  font-size: 10px;
+}
+
+/* contact us section  */
+
+.contact {
+  max-width: 1400px;
+  text-align: center;
+  margin: auto;
+}
+
+.contact_box_container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 35px;
+  padding: 0px 25px 0px 25px;
+}
+.contact_box {
+  border: 2px solid black;
+  padding: 1.5rem 0px 1.5rem 0px;
+  border-radius: 15px;
+}
+.contact_text p,
+.contact_text h3 {
+  margin: 0;
+  padding: 0;
+}
+
+/* footer section  */
+
+.footer .logo h2,
+.quote {
+  color: white;
+  font-size: 12px;
+}
+
+.footer {
+  margin-top: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: rgb(76, 133, 238);
+  align-items: center;
+}
+
+.quote {
+  margin-right: 1%;
+}
+
+.contact_box_container > a {
+  text-decoration: none;
+  color: black;
+}
+
+/* underline to all heading  */
+
+.bodybox h2,
+.management h1,
+.training h1,
+.management_section02 h1,
+.quality_management_section h1 {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 13px;
+}
+
+/* responsive adjust  */
+
+@media (max-width: 1300px) {
+  ul {
+    gap: 3rem;
+    padding-left: 0px;
+  }
+  .content_text {
+    font-size: 20px;
+    padding-left: 2%;
+  }
+}
+
+@media (max-width: 950px) {
+  ul {
+    display: none;
+  }
+
+  nav {
+    justify-content: space-between;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  .simulator {
+    height: auto;
+  }
+}
+@media (max-width: 940px) {
+  .content_text {
+    position: absolute;
+    top: 25%;
+    padding: 2px;
+  }
+}
+
+@media (max-width: 765px) {
+  .safty {
+    height: fit-content;
+  }
+  .contact_box_container {
+    grid-template-columns: auto;
+  }
+}
+@media (max-width: 680px) {
+  .footer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  div.logo {
+    font-size: 13px;
+  }
+  a.btn {
+    font-size: 13px;
+  }
+  div.managementbox_text {
+    font-size: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .management_box > img {
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 350px) {
+  div.logo {
+    font-size: 10px;
+  }
+  a.btn {
+    font-size: 10px;
+  }
+  .training {
+    margin: auto;
+  }
+}
+
+/*Crewmanagement section  */
+.management_section02 {
+  width: 100%;
+  text-align: center;
+}
+
+.recruiting_section {
+  max-width: 1200px;
+
+  margin: 25px auto;
+}
+.recruiting_section h2 {
+  text-align: center;
+}
+
+.managementprocess {
+  max-width: 1377px;
+  margin: auto;
+}
+.managementprocess_container {
+  max-width: 1377px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+}
+
+.managementprocessbox {
+  margin-top: 10px;
+  width: 300px;
+}
+
+.managementprocessbox img {
+  width: 100%;
+  border-radius: 10px;
+  border: 5px solid rgb(76, 133, 238);
+}
+/* Crewmanagement Responsive  */
+
+@media (max-width: 1200px) {
+  .recruiting_section h3 {
+    text-align: center;
+    margin: auto 15px;
+  }
+}
+@media (max-width: 900px) {
+  .recruiting_section {
+    text-align: center;
+    font-size: 12px;
+  }
+  .managementprocessbox_text p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 800px) {
+  .management_section02 h2 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 550px) {
+  .management_section02 h1 {
+    font-size: 20px;
+  }
+  .recruiting_section h1 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .recruiting_section h1 {
+    font-size: 15px;
+  }
+  .recruiting_section h2 {
+    font-size: 13px;
+  }
+  .recruiting_section h3 {
+    font-size: 10px;
+  }
+  .managementprocessbox_text p {
+    font-size: 9px;
+  }
+}
+
+/* quality management section  */
+
+.quality_management_section {
+  max-width: 1377px;
+  text-align: center;
+  margin: auto;
+}
+.quality_management_container01 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+  gap: 10px;
+  padding: 25px;
+  background-color: rgb(120, 171, 237);
+}
+
+.image {
+  width: 350px;
+  transition: 0.5s;
+  object-fit: cover;
+}
+
+.image img {
+  width: 100%;
+}
+.quality_management_text h3 {
+  max-width: 1377px;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+}
+
+.image:hover {
+  transform: translateY(-10px);
+  filter: drop-shadow(3px 2px 4px rgb(255, 255, 255));
+}
+
+.quality_management_container02 {
+  height: 320px;
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quality_management_container02 img {
+  position: absolute;
+  height: 300px;
+  width: 100%;
+  z-index: -1;
+  object-fit: cover;
+  filter: blur(1px);
+}
+.management_text {
+  max-width: 960px;
+  margin: 30px;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* quality management responsive  */
+@media (max-width: 500px) {
+  .quality_management_section h1 {
+    font-size: 25px;
+  }
+  .quality_management_text h3 {
+    font-size: 15px;
+  }
+}
+@media (max-width: 450px) {
+  .management_text h3 {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 360px) {
+  .quality_management_text h3 {
+    font-size: 11px;
+  }
+  .management_text h3 {
+    font-size: 11px;
+  }
+}
